@@ -1,0 +1,730 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0f0f0f;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+}
+
+/* Desktop wrapper */
+.desktop-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+/* Mobile container */
+.mobile-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  overflow: hidden;
+  padding-bottom: 88px;
+}
+
+/* Header section */
+.header-section {
+  position: relative;
+  width: 100%;
+  height: 135px;
+}
+
+.gradient-background {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(255, 128, 251, 1) 0%, rgba(255, 128, 251, 0) 100%);
+}
+
+/* Current location section */
+.current-location-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.map-pin-icon {
+  width: 12px;
+  height: 12px;
+  color: #b8b8b8;
+  flex-shrink: 0;
+}
+
+.location-label {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 600;
+  color: #b8b8b8;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  width: 100%;
+}
+
+.location-name {
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.location-separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 361px;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 16px;
+  position: absolute;
+  top: 91px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 12px;
+  margin: 0 16px;
+}
+
+.search-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #b8b8b8;
+  flex-shrink: 0;
+}
+
+.search-placeholder {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #b8b8b8;
+  font-size: 16px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: -1px;
+}
+
+.mic-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+  color: #b8b8b8;
+  flex-shrink: 0;
+}
+
+/* Profile image */
+.profile-image {
+  position: absolute;
+  width: 81px;
+  height: 43px;
+  top: 24px;
+  right: 16px;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 0 16px;
+  position: relative;
+  top: 22px;
+}
+
+/* Frequently booked section */
+.frequently-booked-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.frequently-booked-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.frequently-booked-container::-webkit-scrollbar {
+  display: none;
+}
+
+.frequently-booked-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  flex-shrink: 0;
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  border: 1px solid #2e2e2e;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-width: 110px;
+}
+
+.frequently-booked-card:hover {
+  background-color: #252525;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.card-title {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #eaeaea;
+  font-size: 16px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-subtitle {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #dbdbdb;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Reminder card */
+.reminder-card {
+  width: 100%;
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  border: 1px solid #2e2e2e;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.reminder-card:hover {
+  background-color: #252525;
+}
+
+.reminder-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.bell-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.reminder-text {
+  flex: 1;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #eaeaea;
+  font-size: 14px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevron-icon {
+  width: 12px;
+  height: 24px;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Reminder section */
+.reminder-section {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.25);
+  border: 0;
+  background: transparent;
+  border-radius: 12px;
+}
+
+.reminder-background {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.reminder-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.qr-code-container {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+}
+
+.qr-code {
+  width: 66px;
+  height: 66px;
+  margin-top: 5px;
+  margin-left: 5px;
+  object-fit: cover;
+}
+
+.reminder-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
+.reminder-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.route-info {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 600;
+  color: #727272;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.validity-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px 0;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.validity-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #727272;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.validity-text {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 600;
+  color: #727272;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reminder-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+}
+
+.location-row {
+  display: flex;
+  width: 100%;
+  height: 24px;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.from-location,
+.to-location {
+  flex: 1;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 700;
+  color: #eaeaea;
+  font-size: 14px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  color: #eaeaea;
+  flex-shrink: 0;
+}
+
+.time-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.time,
+.date {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #727272;
+  font-size: 12px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time-dot {
+  width: 4px;
+  height: 4px;
+  background-color: #727272;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Search section */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.search-section-title {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 800;
+  color: #a9a9a9;
+  font-size: 16px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.routes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.route-card {
+  width: 100%;
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.route-card:hover {
+  background-color: #252525;
+}
+
+.route-number {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 700;
+  color: #cccccc;
+  font-size: 20px;
+  line-height: normal;
+  flex-shrink: 0;
+}
+
+.route-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.route-destination {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 600;
+  color: #eaeaea;
+  font-size: 14px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.route-timing {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.next-label {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 500;
+  color: #dbdbdb;
+  font-size: 12px;
+  line-height: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.next-time {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 700;
+  color: #dbdbdb;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.route-chevron {
+  width: 12px;
+  height: 24px;
+  color: #cccccc;
+  flex-shrink: 0;
+}
+
+/* Navigation menu */
+.navigation-menu {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 72px;
+  background-color: #141414;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 50;
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #979797;
+  transition: color 0.2s ease;
+}
+
+.nav-icon.active {
+  color: white;
+}
+
+.nav-label {
+  font-family: 'Plus Jakarta Sans', Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #979797;
+  transition: color 0.2s ease;
+}
+
+.nav-label.active {
+  color: white;
+}
+
+/* Responsive design */
+@media (min-width: 1024px) {
+  .desktop-wrapper {
+    max-width: 500px;
+    margin: 0 32px;
+  }
+  
+  .profile-image {
+    right: 32px;
+  }
+  
+  .navigation-menu {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .desktop-wrapper {
+    max-width: 600px;
+    margin: 0 64px;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .search-bar {
+    margin: 0 8px;
+    max-width: calc(100% - 16px);
+  }
+  
+  .main-content {
+    padding: 0 12px;
+  }
+  
+  .frequently-booked-container {
+    gap: 8px;
+  }
+  
+  .frequently-booked-card {
+    min-width: 100px;
+    padding: 12px;
+  }
+  
+  .nav-button {
+    padding: 6px 2px;
+  }
+  
+  .nav-label {
+    font-size: 11px;
+  }
+}
